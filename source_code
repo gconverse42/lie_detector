@@ -1,0 +1,75 @@
+#New at this, I programmed this thing directly in IDLE so I could run and test it, so it won't have a commit history
+print("Lie Detector Test")
+
+print('Our privacy is under siege. The government, corporations, our employers, even neighbors seek information about us.')
+print('Our last refuge may be our own minds – but not for long.')
+print('Body language, facial expressions, and speech patterns can subtly betray a person’s thoughts.')
+print('As an example, please choose one of the following four objects: a ring, a coin, a key, and a watch.')
+print('Hold it in your mind. I will ask you a question, and you may answer it truthfully or falsely. It is your choice.')
+
+tally = 0
+
+print("Is the object you have in mind the coin or the key? Please answer Y or N")
+answer1=input()
+
+if answer1=='Y':
+      tally = tally + 1
+
+elif answer1=='N':
+      tally = tally
+
+else: print('Please enter a valid answer.')
+        
+      
+print("There are no tics to give you away easily. If you answered truthfully last time, please answer truthfully again. If you lied last time, please lie again.")
+print("Is the object you have in mind the coin or the watch? Please answer Y or N")
+answer2=input()
+
+if answer2=='Y':
+      tally = tally + 2
+
+elif answer2=='N':
+      tally = tally
+
+else: print('Please enter a valid answer.')
+
+print("You're good at concealing your thoughts. If you answered truthfully last time, please answer truthfully again. If you lied last time, please lie again.")
+print("Is the object you have in mind the key or the watch? Please answer Y or N")
+answer3=input()
+
+if answer3=='Y':
+      tally = tally + 4
+
+elif answer3=='N':
+      tally = tally
+
+else: print('Please enter a valid answer.')
+
+print("You would make a good poker player, but your body language has given you away.")
+if tally==0:
+        print("You are telling me the truth, and you have chosen the ring.")
+elif tally==3:
+        print("You are telling me the truth, and you have chosen the coin.")
+elif tally==5:
+        print("You are telling me the truth, and you have chosen the key.")
+elif tally==6:
+        print("You are telling me the truth, and you have chosen the watch.")
+elif tally==7:
+        print("You are lying to me, and you have chosen the ring.")
+elif tally==4:
+        print("You are lying to me, and you have chosen the coin.")
+elif tally==2:
+        print("You are lying to me, and you have chosen the key.")
+elif tally==1:
+        print("You are lying to me, and you have chosen the watch.")
+        
+else: print("Cheating isn't fair! Run me again, and follow the instructions this time!")
+
+#A total of 0 means “ring” and the person told the truth.
+#A total of 3 means “quarter” and the person told the truth.
+#A total of 5 means “key” and the person told the truth.
+#A total of 6 means “watch” and the person told the truth.
+#A total of 1 means “watch” and the person lied.
+#A total of 2 means “key” and the person lied.
+#A total of 4 means “quarter” and the person lied.
+#A total of 7 means “ring” and the person lied.
