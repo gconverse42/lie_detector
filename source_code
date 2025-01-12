@@ -64,12 +64,3 @@ elif tally==1:
         print("You are lying to me, and you have chosen the watch.")
         
 else: print("Cheating isn't fair! Run me again, and follow the instructions this time!")
-
-#A total of 0 means “ring” and the person told the truth.
-#A total of 3 means “quarter” and the person told the truth.
-#A total of 5 means “key” and the person told the truth.
-#A total of 6 means “watch” and the person told the truth.
-#A total of 1 means “watch” and the person lied.
-#A total of 2 means “key” and the person lied.
-#A total of 4 means “quarter” and the person lied.
-#A total of 7 means “ring” and the person lied.
